@@ -34,7 +34,7 @@ const NavBar = () => {
   }, [lastScrollY]);
   return (
     <nav
-      className={`text-gray-400 sticky top-0 left-0 right-0  z-10  flex justify-end gap-3 ${isVisible && "bg-[#1C1C1C]"}  p-4`}
+      className={`text-gray-400 fixed top-0 left-0 right-0  z-10  flex justify-end gap-3 ${!isVisible && "bg-[#1C1C1C]"}  p-4`}
     >
       {pages.map((page, index) => (
         <Link key={index} href={page.url}>
