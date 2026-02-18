@@ -14,6 +14,7 @@ const NavBar = () => {
   const pages: IPage[] = [
     { name: "Home", url: "/" },
     { name: "Members", url: "/members" },
+    { name: "Courses", url: "/courses" },
     { name: "Test", url: "/test" },
     { name: "Articles", url: "/articles" },
     { name: "Contact", url: "/contact" },
