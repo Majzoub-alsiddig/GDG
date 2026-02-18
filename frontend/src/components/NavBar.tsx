@@ -9,6 +9,7 @@ interface IPage {
   url: string;
   name: string;
 }
+
 const NavBar = () => {
   const pathname = usePathname();
   const pages: IPage[] = [
@@ -21,9 +22,10 @@ const NavBar = () => {
     { name: "FAQ", url: "/faq" },
     { name: "Admin", url: "/admin" },
   ];
+
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  console.log("pathname: ", pathname);
+
   const controlNavbar = () => {
     if (window.scrollY > lastScrollY) {
       setIsVisible(false);
@@ -32,17 +34,21 @@ const NavBar = () => {
     }
     setLastScrollY(window.scrollY);
   };
+
   useEffect(() => {
     window.addEventListener("scroll", controlNavbar);
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
   }, [lastScrollY]);
+
   return (
     <nav
-      className={`text-gray-400 fixed top-0 left-0 right-0  z-10  flex items-center justify-between gap-3 ${!isVisible && "bg-[#1C1C1C]"}  p-3`}
+      className={`fixed top-0 left-0 right-0 z-20 flex items-center justify-between px-6 py-3 transition-all duration-300 ${
+        isVisible ? "bg-transparent" : "bg-white/90 backdrop-blur-md shadow-md"
+      }`}
     >
-      <div className="relative w-40 h-10 ">
+      <Link href="/" className="relative w-56 h-12">
         <Image
           src={GDGLogo}
           alt="GDG Logo"
@@ -50,13 +56,18 @@ const NavBar = () => {
           className="object-contain object-left"
           priority
         />
-      </div>
-      <div className="flex items-center gap-2">
+      </Link>
+
+      <div className="flex items-center gap-6 text-sm font-medium">
         {pages.map((page, index) => (
           <Link
-            className={`${pathname === page.url && "text-white"}`}
             key={index}
             href={page.url}
+            className={`transition-colors duration-200 ${
+              pathname === page.url
+                ? isVisible ? "text-white font-semibold" : "text-black font-semibold"
+                : isVisible ? "text-gray-200 hover:text-blue-400" : "text-gray-700 hover:text-blue-600"
+            }`}
           >
             {page.name}
           </Link>
