@@ -1,8 +1,8 @@
 import Image from "next/image";
-import GDGLogo from "@/../assets/GDGLogo.png"; // Adjust path
+import GDGLogo from "@/../assets/GDGLogo.png";
 
 import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";  
-import { FaXTwitter } from "react-icons/fa6"; 
+import { FaWhatsapp, FaXTwitter } from "react-icons/fa6"; 
 import { MdEmail } from "react-icons/md"; 
 
 const Footer = () => {
@@ -13,20 +13,23 @@ const Footer = () => {
       </div>
 
      <div className="flex justify-center space-x-6">
-        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"  className="text-blue-500 hover:text-blue-400 text-2xl" >
+        <a href="https://www.facebook.com/GDGUofK" target="_blank" rel="noopener noreferrer"  className="text-blue-500 hover:text-blue-400 text-2xl" >
           <FaFacebook />
         </a>
-        <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer"  className="text-blue-500 hover:text-blue-400 text-2xl" >
+        <a href="https://www.linkedin.com/company/google-developer-student-clubs-university-of-khartoum/" target="_blank" rel="noopener noreferrer"  className="text-blue-500 hover:text-blue-400 text-2xl" >
           <FaLinkedin />
         </a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"  className="text-blue-500 hover:text-blue-400 text-2xl" >
+        <a href="https://www.instagram.com/gdg_uofk" target="_blank" rel="noopener noreferrer"  className="text-blue-500 hover:text-blue-400 text-2xl" >
           <FaInstagram />
         </a>
-        <a href="https://x.com/" target="_blank" rel="noopener noreferrer"  className="text-blue-500 hover:text-blue-400 text-2xl" >
+        <a href="https://x.com/GDG_UofK" target="_blank" rel="noopener noreferrer"  className="text-blue-500 hover:text-blue-400 text-2xl" >
           <FaXTwitter />
         </a>
-        <a href="mailto:mail@example.com"  className="text-blue-500 hover:text-blue-400 text-2xl" >
+        <a href="mailto:contact@gdguofk.club" className="text-blue-500 hover:text-blue-400 text-2xl" >
           <MdEmail />
+        </a>
+        <a href="https://whatsapp.com/channel/0029Vb77fOH002T8HKROP32H" className="text-blue-500 hover:text-blue-400 text-2xl" >
+          <FaWhatsapp />
         </a>
       </div>
       
