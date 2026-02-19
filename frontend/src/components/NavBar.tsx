@@ -24,6 +24,7 @@ const NavBar = () => {
 
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const controlNavbar = () => {
     if (window.scrollY > lastScrollY) {
@@ -42,37 +43,74 @@ const NavBar = () => {
   }, [lastScrollY]);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-20 flex items-center justify-between px-6 py-3 transition-all duration-300 ${
-        isVisible ? "bg-transparent" : "bg-black/60 backdrop-blur-md shadow-md"
-      }`}
-    >
-      <Link href="/" className="relative w-56 h-12">
-        <Image
-          src={GDGLogoSvg}
-          alt="GDG Logo"
-          fill
-          className="object-contain object-left"
-          priority
-        />
-      </Link>
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-6 py-3 transition-all duration-300 ${
+          isVisible ? "bg-transparent" : "bg-black/80 backdrop-blur-md shadow-md"
+        }`}
+      >
+        <Link href="/" className="relative w-40 h-10">
+          <Image
+            src={GDGLogoSvg}
+            alt="GDG Logo"
+            fill
+            className="object-contain object-left"
+            priority
+          />
+        </Link>
 
-      <div className="flex items-center gap-6 text-sm font-medium">
+        <button
+          className="md:hidden text-white focus:outline-none z-40"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? "✕" : "☰"}
+        </button>
+
+        <div className="hidden md:flex items-center gap-6 text-sm font-medium">
+          {pages.map((page, index) => (
+            <Link
+              key={index}
+              href={page.url}
+              className={`transition-colors duration-200 ${
+                pathname === page.url
+                  ? "text-blue-400 font-bold"
+                  : "text-white hover:text-blue-300"
+              }`}
+            >
+              {page.name}
+            </Link>
+          ))}
+        </div>
+      </nav>
+
+      <div
+        className={`fixed top-0 left-0 h-screen w-1/2 bg-black text-white flex flex-col gap-4 p-6 transform transition-transform duration-300 z-40 ${
+          menuOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
         {pages.map((page, index) => (
           <Link
             key={index}
             href={page.url}
             className={`transition-colors duration-200 ${
               pathname === page.url
-                ? isVisible ? "text-blue-500 font-semibold" : "text-blue-500 font-semibold"
-                : isVisible ? "text-gray-100 hover:text-blue-400" : "text-gray-100 hover:text-blue-600"
+                ? "text-blue-400 font-bold"
+                : "hover:text-blue-300"
             }`}
+            onClick={() => setMenuOpen(false)}
           >
             {page.name}
           </Link>
         ))}
       </div>
-    </nav>
+
+      {menuOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-20"
+          onClick={() => setMenuOpen(false)}
+        />
+      )}
+    </>
   );
 };
 
