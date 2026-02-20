@@ -39,3 +39,16 @@
   font-size: 0.9rem;
   color: #666;
 }
+
+@media (max-width: 920px) {
+  .courses-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 510px) {
+  .courses-container {
+    margin: 0px;
+    padding: 5px;
+  }
+}
