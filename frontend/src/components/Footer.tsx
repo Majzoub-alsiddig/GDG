@@ -32,10 +32,6 @@ const Footer = () => {
           <MdEmail />
         </a>
       </div>
-      
-      {/* Copyright: Using text-xs (extra small) and text-center 
-          to ensure it fits on 200px widths.
-      */}
       <p className="mt-6 text-[10px] min-[320px]:text-xs md:text-sm text-gray-500 font-poppins text-center leading-tight">
         © {new Date().getFullYear()} GDG University of Khartoum
       </p>
