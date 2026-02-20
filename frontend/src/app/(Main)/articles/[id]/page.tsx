@@ -16,7 +16,7 @@ export default async function FullArticlePage({
   const htmlContent = generateHTML(article.content, [StarterKit]);
 
   return (
-    <main className="min-h-screen bg-white pb-20">
+    <main className="min-h-screen mt-16 bg-white pb-20">
       {/* Article Header */}
       <header className="max-w-3xl mx-auto pt-16 px-6 mb-12">
         <div className="flex items-center gap-2 text-indigo-600 font-bold text-sm mb-4 uppercase tracking-widest">

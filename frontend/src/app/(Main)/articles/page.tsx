@@ -4,7 +4,7 @@ import articles from "./exampleArticles.json";
 
 const ArticlesPage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen pt-16 bg-white">
       {/* Hero Header */}
       <header className="py-16 px-6 border-b border-slate-100 bg-slate-50/50">
         <div className="max-w-6xl mx-auto text-center">
