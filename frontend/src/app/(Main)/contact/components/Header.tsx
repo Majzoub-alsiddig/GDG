@@ -2,7 +2,7 @@ import coverImg from "@/../assets/contact-cover.jpg";
 
 const Header = () => {
   return (
-    <header className="relative h-screen w-full overflow-hidden flex items-center justify-center text-center">
+    <header className="relative h-60 w-full overflow-hidden flex items-center justify-center text-center">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${coverImg.src})` }}
@@ -10,13 +10,8 @@ const Header = () => {
         <div className="absolute inset-0 bg-black/70" />
       </div>
       <div className="relative">
-        {/* <p className="text-yellow-500 text-6xl">Courses</p>
-        <p className="m-10 z-10 px-4 font-mono text-white text-2xl">
-          "Learning is the 
-          <span className="text-blue-500"> heart of growth </span>
-          our courses are designed to inspire, challenge, and prepare you for 
-          <span className="text-green-500"> success</span>."
-        </p> */}
+        <h2 className="text-3xl text-center m-10 text-blue-500 font-bold">Contact US</h2>
+
       </div>
     </header>
   );
