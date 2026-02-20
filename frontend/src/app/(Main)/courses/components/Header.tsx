@@ -1,4 +1,4 @@
-import coverImg from "../../../../assets/cover.jpg";
+import coverImg from "@/../assets/cover.jpg";
 
 const Header = () => {
   return (
@@ -12,9 +12,9 @@ const Header = () => {
       <div className="relative">
         <p className="text-yellow-500 text-6xl">Courses</p>
         <p className="m-10 z-10 px-4 font-mono text-white text-2xl">
-          "Learning is the 
+          "Learning is the
           <span className="text-blue-500"> heart of growth </span>
-          our courses are designed to inspire, challenge, and prepare you for 
+          our courses are designed to inspire, challenge, and prepare you for
           <span className="text-green-500"> success</span>."
         </p>
       </div>
@@ -23,3 +23,4 @@ const Header = () => {
 };
 
 export default Header;
+
