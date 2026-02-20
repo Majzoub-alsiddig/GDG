@@ -1,0 +1,119 @@
+[
+  {
+    "id": "1",
+    "title": "Mastering Tailwind CSS in 2026",
+    "author": "Baboshi",
+    "createdAt": "2026-02-15",
+    "category": "Design",
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Tailwind has evolved beyond just utility classes. It's now a full design system engine."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": { "level": 3 },
+          "content": [{ "type": "text", "text": "The power of Typography" }]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            { "type": "text", "text": "Using the " },
+            { "type": "text", "marks": [{ "type": "code" }], "text": "prose" },
+            {
+              "type": "text",
+              "text": " class makes rendering Tiptap content effortless."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "2",
+    "title": "Why I Switched to Anghami for Coding Sessions",
+    "author": "Baboshi",
+    "createdAt": "2026-02-18",
+    "category": "Lifestyle",
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Music is the ultimate productivity hack. Here is why I prefer Anghami:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Deep integration with local artists."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Seamless handoff between devices."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "3",
+    "title": "Next.js App Router: 1 Year Later",
+    "author": "Admin",
+    "createdAt": "2026-02-20",
+    "category": "Tech",
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Server components have completely changed how we think about data fetching."
+            },
+            {
+              "type": "text",
+              "marks": [{ "type": "bold" }],
+              "text": " No more useEffect for initial loads!"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

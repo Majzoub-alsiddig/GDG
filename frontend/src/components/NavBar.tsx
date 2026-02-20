@@ -46,7 +46,9 @@ const NavBar = () => {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-6 py-3 transition-all duration-300 ${
-          isVisible ? "bg-transparent" : "bg-black/80 backdrop-blur-md shadow-md"
+          isVisible && !pathname.startsWith("/articles")
+            ? "bg-transparent"
+            : "bg-black/80 backdrop-blur-md shadow-md"
         }`}
       >
         <Link href="/" className="relative w-40 h-10">
