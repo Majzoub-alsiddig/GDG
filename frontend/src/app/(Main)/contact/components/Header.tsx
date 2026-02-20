@@ -1,4 +1,4 @@
-import coverImg from "../../../../assets/contact-cover.jpg";
+import coverImg from "@/../assets/contact-cover.jpg";
 
 const Header = () => {
   return (
@@ -23,3 +23,4 @@ const Header = () => {
 };
 
 export default Header;
+
