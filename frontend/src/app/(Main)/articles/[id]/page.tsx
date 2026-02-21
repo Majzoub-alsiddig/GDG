@@ -2,6 +2,7 @@ import articlesData from "../exampleArticles.json";
 import { generateHTML } from "@tiptap/html";
 import StarterKit from "@tiptap/starter-kit";
 import { notFound } from "next/navigation";
+import Footer from "@/components/Footer";
 
 export default async function FullArticlePage({
   params,
@@ -42,6 +43,9 @@ export default async function FullArticlePage({
           className="prose prose-lg prose-slate prose-indigo max-w-none"
           dangerouslySetInnerHTML={{ __html: htmlContent }}
         />
+      </div>
+      <div className="w-full mt-10">
+        <Footer />
       </div>
     </main>
   );
