@@ -1,6 +1,6 @@
 from django.db import models
 
-class courses(models.Model):
+class Courses(models.Model):
     title = models.CharField(max_length=255)
     desc = models.TextField()
     url = models.URLField()
@@ -9,7 +9,7 @@ class courses(models.Model):
         return self.title
 
 class FAQ(models.Model):
-    course = models.ForeignKey(courses, related_name='faq' ,on_delete=models.CASCADE)
+    course = models.ForeignKey(Courses, related_name='faq' ,on_delete=models.CASCADE)
     q = models.TextField()
     a = models.TextField()
 
