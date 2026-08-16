@@ -1,6 +1,8 @@
 import express from "express";
 import mongoose from "mongoose";
 import membersRouter from "./routes/members";
+import coursesRouter from "./routes/courses";
+import articlesRouter from "./routes/articles";
 
 mongoose
   .connect("mongodb://127.0.0.1:27017")
@@ -15,7 +17,8 @@ app.use(express.json());
 
 // app.use("/registeration", registeraRouter);
 app.use("/members", membersRouter);
-// app.use("/courses", coursesRouter);
+app.use("/courses", coursesRouter);
+
 // app.use("/articles", articlesRouter);
 // app.use("/contacts", contactsRouter);
 // app.use("/admin", auth_middleware, adminRouter);

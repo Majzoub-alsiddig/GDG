@@ -6,9 +6,12 @@ interface IMember {
   photo?: string;
 }
 
-const memberSchema = new Schema<IMember>({
-  username: { type: String, required: true },
-  email: { type: String, required: true },
-});
+const memberSchema = new Schema<IMember>(
+  {
+    username: { type: String, required: true },
+    email: { type: String, required: true },
+  },
+  { timestamps: true, timeseries: true },
+);
 
 export const MemberModel = model<IMember>("Member", memberSchema);
