@@ -4,3 +4,7 @@ __pycache__/
 db.sqlite3
 .vscode/
 .env
+
+node_modules
+build
+package-lock.json
