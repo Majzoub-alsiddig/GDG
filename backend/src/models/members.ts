@@ -1,13 +1,13 @@
 import { model, Schema } from "mongoose";
 
 interface IMember {
-  name: string;
+  username: string;
   email: string;
-  photo: string;
+  photo?: string;
 }
 
 const memberSchema = new Schema<IMember>({
-  name: { type: String, required: true },
+  username: { type: String, required: true },
   email: { type: String, required: true },
 });
 
