@@ -11,7 +11,7 @@ const memberSchema = new Schema<IMember>(
     username: { type: String, required: true },
     email: { type: String, required: true },
   },
-  { timestamps: true, timeseries: true },
+  { timestamps: true },
 );
 
 export const MemberModel = model<IMember>("Member", memberSchema);

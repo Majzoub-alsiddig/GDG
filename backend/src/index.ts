@@ -18,8 +18,7 @@ app.use(express.json());
 // app.use("/registeration", registeraRouter);
 app.use("/members", membersRouter);
 app.use("/courses", coursesRouter);
-
-// app.use("/articles", articlesRouter);
+app.use("/articles", articlesRouter);
 // app.use("/contacts", contactsRouter);
 // app.use("/admin", auth_middleware, adminRouter);
 
